@@ -1,0 +1,17 @@
+id,keyword,volume,difficulty,intent,cluster,stage,sourceNotes,primary
+kw-01,ازاي تختار موبايل مناسب,1400,36,Informational,موبايلات,Backlog,Synthetic example values only,true
+kw-02,أفضل موبايل في مصر,880,41,Commercial,موبايلات,Backlog,Synthetic example values only,false
+kw-03,سعر موبايل سامسونج في مصر,650,45,Commercial,موبايلات,Brief ready,Synthetic example values only,false
+kw-04,موبايل سامسونج بالتقسيط,320,34,Transactional,موبايلات,Backlog,Synthetic example values only,false
+kw-05,شراء موبايل اونلاين مصر,700,38,Transactional,موبايلات,Writing,Synthetic example values only,false
+kw-06,موبايلات سامسونج,2300,52,Commercial,موبايلات,Backlog,Synthetic example values only,false
+kw-07,أفضل شاشة سمارت,520,31,Commercial,شاشات,Brief ready,Synthetic example values only,true
+kw-08,اسعار الشاشات 43 بوصة,450,29,Commercial,شاشات,Backlog,Synthetic example values only,false
+kw-09,افضل تلفزيون سمارت في مصر,390,30,Commercial,شاشات,Backlog,Synthetic example values only,false
+kw-10,ازاي اوصل لخدمة العملاء,210,16,Navigational,خدمة العملاء,Backlog,Synthetic example values only,true
+kw-11,رقم خدمة عملاء الاجهزة المنزلية,170,18,Navigational,خدمة العملاء,Backlog,Synthetic example values only,false
+kw-12,طريقة تنظيف فلتر الغسالة,310,21,Informational,الغسالات,Backlog,Synthetic example values only,true
+kw-13,الغسالة مش بتسحب مية,260,19,Informational,الغسالات,Backlog,Synthetic example values only,false
+kw-14,شراء فلتر مياه,190,27,Transactional,فلاتر المياه,Backlog,Synthetic example values only,true
+kw-15,افضل فلتر مياه للبيت,340,33,Commercial,فلاتر المياه,Backlog,Synthetic example values only,false
+kw-16,غسالة اتوماتيك تقسيط,230,25,Transactional,الغسالات,Published,Synthetic example values only,false
