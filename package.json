@@ -1,0 +1,1 @@
+{"name":"search-intent-studio","version":"1.0.0","private":false,"type":"module","description":"Local-first keyword intent and editorial planning workbench","scripts":{"test":"node --test test.mjs"},"engines":{"node":">=20"}}
