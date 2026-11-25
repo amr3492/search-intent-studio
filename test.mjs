@@ -74,3 +74,27 @@ test("CSV export round-trips quoted phrases", () => {
   assert.equal(parsed[0].sourceNotes, "csv, import");
   assert.equal(parsed[0].intent, "Informational");
 });
+
+
+test("numeric import rejects non-finite, negative, and over-100 difficulty values", () => {
+  const rows = prepareKeywords([
+    { id: "a", keyword: "one", volume: "Infinity", difficulty: -1 },
+    { id: "b", keyword: "two", volume: "-4", difficulty: 101 },
+  ]);
+  assert.equal(rows.length, 2);
+  assert.equal(rows[0].volume, null);
+  assert.equal(rows[0].difficulty, null);
+  assert.equal(rows[1].volume, null);
+  assert.equal(rows[1].difficulty, null);
+});
+
+test("cluster suggestions remain stable for equal-similarity candidates", () => {
+  const rows = prepareKeywords([
+    { id: "a", keyword: "red phone case" },
+    { id: "b", keyword: "red phone cover" },
+    { id: "c", keyword: "phone red cover" },
+  ]);
+  const first = suggestClusters(rows, 0.5);
+  const again = suggestClusters(rows, 0.5);
+  assert.deepEqual([...first.assignment], [...again.assignment]);
+});
