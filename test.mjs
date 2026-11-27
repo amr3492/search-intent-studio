@@ -98,3 +98,13 @@ test("cluster suggestions remain stable for equal-similarity candidates", () => 
   const again = suggestClusters(rows, 0.5);
   assert.deepEqual([...first.assignment], [...again.assignment]);
 });
+
+test("audit counts zero numeric inputs as present and blanks as missing", () => {
+  const rows = prepareKeywords([
+    { id: "zero", keyword: "zero values", volume: 0, difficulty: 0, intent: "Informational", cluster: "numbers" },
+    { id: "blank", keyword: "blank values", volume: "", difficulty: "", intent: "Commercial", cluster: "numbers" },
+  ]);
+  const audit = auditKeywords(rows);
+  assert.equal(audit.missingVolume, 1);
+  assert.equal(audit.missingDifficulty, 1);
+});
